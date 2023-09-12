@@ -36,6 +36,7 @@ function handleRoverData(data) {
     roverList.innerHTML =
       "<li>No photos were taken on this date. Please select another date.</li>";
   } else {
+    roverList.innerHTML = "";
     const photos = data.photos
       .map((photo) => `<li><img src="${photo.img_src}" alt="Rover photo"></li>`)
       .join("");
