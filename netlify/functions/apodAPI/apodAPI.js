@@ -6,6 +6,7 @@ const handler = async (event) => {
     const response = await fetch(
       `https://api.nasa.gov/planetary/apod?api_key=${apiKEY}`
     );
+    const data = await response.json();
 
     return {
       statusCode: 200,
