@@ -47,8 +47,11 @@ function handleRoverData(data) {
 fetchData(apodURL, handleApodData);
 
 submitButton.addEventListener("click", function () {
-  const date = dateInput.value;
-  const roverURL = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${date}&api_key=${NASA_API_KEY}`;
+  const date = dateInput.value
+    ? dateInput.value
+    : new Date().toString().slice(0, 10);
+
+  const roverURL = `https://cheerful-twilight-c1399d.netlify.app/.netlify/functions/roverAPI?date=${date}`;
 
   fetchData(roverURL, handleRoverData);
 });
