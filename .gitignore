@@ -1,2 +1,5 @@
 private.js
 .env.local
+
+# Local Netlify folder
+.netlify
