@@ -44,7 +44,7 @@ function handleRoverData(data) {
   }
 }
 
-// Fetch and displat APOD
+// Fetch and display APOD
 fetchData(apodURL, handleApodData);
 
 submitButton.addEventListener("click", function () {
